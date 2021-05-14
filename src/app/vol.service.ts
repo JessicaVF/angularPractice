@@ -15,5 +15,8 @@ export class VolService {
   findAll(): Observable<Vol[]> {
     return this.http.get<Vol[]>(this.volUrl);
   }
+  findOne(id: number): Observable<Vol> {
+    return this.http.get<Vol>(this.volUrl + "/"+ id);
+  }
 }
 

@@ -7,6 +7,13 @@ import { VolsPreviewComponent } from './vols-preview/vols-preview.component';
 import { VolsDetailComponent } from './vols-detail/vols-detail.component';
 import { AddVolsComponent } from './add-vols/add-vols.component';
 import {HttpClientModule} from '@angular/common/http'
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+  path:'volDetail/:id', component: VolsDetailComponent
+}
+]
 
 @NgModule({
   declarations: [
@@ -19,7 +26,8 @@ import {HttpClientModule} from '@angular/common/http'
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]

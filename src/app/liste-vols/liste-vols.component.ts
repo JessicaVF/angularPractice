@@ -9,9 +9,6 @@ import { VolService } from '../vol.service';
 })
 export class ListeVolsComponent implements OnInit {
   vols: Vol[] =[];
-  filterStr!: string;
-  // selectedVol!: Vol;
-
 
   constructor(private volService: VolService) { }
 
