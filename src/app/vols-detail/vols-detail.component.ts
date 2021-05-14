@@ -9,7 +9,7 @@ import { VolService } from '../vol.service';
   styleUrls: ['./vols-detail.component.css']
 })
 export class VolsDetailComponent implements OnInit {
-  retard = "This flight is and is not in retard :)"
+  retard = "You must be in a hurry, because this flight is in retard #EvilLaugh"
   vol!: Vol;
   constructor(private volService: VolService, private route: ActivatedRoute) { }
 

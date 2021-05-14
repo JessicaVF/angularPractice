@@ -1,7 +1,7 @@
-<div>
+<div [ngClass]="{'red': vol.late}">
   <h3>Numéro: </h3>
   <p>{{vol.volNumber}}</p>
-  <button [routerLink]="['/volDetail', vol.id]">Plus d'info</button>
+  <button [routerLink]=" ['/volDetail', vol.id]">Plus d'info</button>
   <h3>Aéroport de départ: </h3>
   <p>{{vol.departureAirportCode}}</p>
   <h3>Date et heure: </h3>

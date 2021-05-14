@@ -11,8 +11,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-  path:'volDetail/:id', component: VolsDetailComponent
-}
+  path:'volDetail/:id', component: VolsDetailComponent,
+  },
+  {path: 'volsList', component: ListeVolsComponent}
 ]
 
 @NgModule({

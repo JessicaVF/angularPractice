@@ -3,3 +3,7 @@ div {
   border: 2px solid aquamarine;
   margin-bottom: 2%;
 }
+.red {
+  background-color: rgba(209, 15, 15, 0.781);
+  border: 3px solid gray;
+}

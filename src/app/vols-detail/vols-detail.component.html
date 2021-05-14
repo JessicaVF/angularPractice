@@ -1,5 +1,8 @@
 <p>{{vol?.volNumber}}</p>
-<p>{{retard}}</p>
+<div *ngIf="vol.late">
+  <p>{{retard}}</p>
+</div>
+
 <h3>Prix</h3>
 <p>{{vol?.price}}</p>
 <h3>Aéroport de départ: </h3>
