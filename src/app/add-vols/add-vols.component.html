@@ -1,1 +1,23 @@
-<p>add-vols works!</p>
+<form [formGroup]="addVol" (ngSubmit)="addVolF()">
+  <label>Vol Number:</label>
+  <input formControlName="volNumber" type="text" />
+
+  <label> departureAirportCode: </label>
+  <input formControlName="departureAirportCode" type="text" />
+  <label> arrivalAirportCode: </label>
+  <input formControlName="arrivalAirportCode" type="text" />
+  <label> departureDate: </label>
+  <input formControlName="departureDate" type="date" />
+  <label> arrivalDate: </label>
+  <input formControlName="arrivalDate" type="date" />
+  <label> departureTime: </label>
+  <input formControlName="departureTime" type="time" />
+  <label> arrivalTime: </label>
+  <input formControlName="arrivalTime" type="time" />
+  <label> late: </label>
+  <input formControlName="late" type="checkbox" />
+  <label> price: </label>
+  <input formControlName="price" type="number" />
+
+  <button type="submit">Add vol</button>
+</form>

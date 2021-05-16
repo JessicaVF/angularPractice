@@ -8,7 +8,7 @@ import { Vol } from './models/vol';
 })
 export class VolService {
 
-  private volUrl = env.apiUrl + "vols";
+  private volUrl = env.apiUrl + "vols/";
 
   constructor(private http: HttpClient) { }
 
@@ -16,7 +16,12 @@ export class VolService {
     return this.http.get<Vol[]>(this.volUrl);
   }
   findOne(id: number): Observable<Vol> {
-    return this.http.get<Vol>(this.volUrl + "/"+ id);
+    return this.http.get<Vol>(this.volUrl + id);
+  }
+  add(vol: Vol):Observable<any[]>{
+    console.log("here");
+    console.log(vol)
+    return this.http.post<any[]>(this.volUrl, vol);
   }
 }
 

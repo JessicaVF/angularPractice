@@ -8,12 +8,14 @@ import { VolsDetailComponent } from './vols-detail/vols-detail.component';
 import { AddVolsComponent } from './add-vols/add-vols.component';
 import {HttpClientModule} from '@angular/common/http'
 import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
   path:'volDetail/:id', component: VolsDetailComponent,
   },
-  {path: 'volsList', component: ListeVolsComponent}
+  {path: 'volsList', component: ListeVolsComponent},
+  {path: 'addVol', component: AddVolsComponent}
 ]
 
 @NgModule({
@@ -29,6 +31,7 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
